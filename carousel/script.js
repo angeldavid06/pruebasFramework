@@ -1,4 +1,4 @@
-const images = [
+const route_images = [
     './img/1 (1).jpg',
     './img/1 (2).jpg',
     './img/1 (3).jpg',
@@ -8,5 +8,5 @@ const images = [
 ];
 
 (() => {
-    render_images(images);
+    render_images(route_images);
 })()
