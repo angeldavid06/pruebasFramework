@@ -1,9 +1,11 @@
 const carousel = document.getElementById("container-images");
-const carousel_btn_previus = document.getElementById("carousel-previus");
+const carousel_btn_previous = document.getElementById("carousel-previous");
 const carousel_btn_next = document.getElementById("carousel-next");
+
 let getImages;
 let wCarousel = carousel.clientWidth; 
 let auxiliar = 0; 
+
 const images = [
     './img/1 (1).jpg',
     './img/1 (2).jpg',
@@ -21,14 +23,12 @@ const render_images = (c) => {
     }
 }
 
-carousel_btn_previus.addEventListener('click', () => {
+carousel_btn_previous.addEventListener('click', () => {
     if ((auxiliar-1) >= 0) {
-        getImages[auxiliar].setAttribute("style","");
         getImages[auxiliar-1].style.right = 0;
+        getImages[auxiliar].setAttribute("style","");
         getImages[auxiliar].style.right = wCarousel;
-        console.log(getImages[auxiliar]);
         auxiliar--;
-        console.log(auxiliar);
     }
 });
 
@@ -37,7 +37,6 @@ carousel_btn_next.addEventListener('click', () => {
         getImages[auxiliar].style.left = (-1)*wCarousel;
         getImages[auxiliar+1].style.left = 0;
         auxiliar++;
-        console.log(auxiliar);
     }
 });
 
