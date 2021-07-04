@@ -4,12 +4,9 @@ let sharedFunction = ''
 
 // Variables necesarias para la ejecución del carrusel
 
-const carousel = document.getElementById("container-images");
-const carousel_btn_previous = document.getElementById("carousel-previous");
-const carousel_btn_next = document.getElementById("carousel-next");
-
+let carousel;
 let getImages;
-let wCarousel = carousel.clientWidth; 
+let wCarousel = 0; 
 let auxiliar = 0; 
 
 // Script para generar alertas o confirms
@@ -272,6 +269,8 @@ document.addEventListener('click', e => {
 // Script para generar un carrusel
 
 const render_images = (c) => {
+    carousel = document.getElementById("container-images");
+    wCarousel = carousel.clientWidth;
     for (let index = 0; index < c.length; index++) {
         const img = document.createElement('img');
         img.setAttribute("src",c[index]);
@@ -282,19 +281,25 @@ const render_images = (c) => {
     getImages[0].style.left = 0;
 }
 
-carousel_btn_previous.addEventListener('click', () => {
-    if ((auxiliar-1) >= 0) {
-        getImages[auxiliar-1].style.right = 0;
-        getImages[auxiliar].setAttribute("style","");
-        getImages[auxiliar].style.right = wCarousel;
-        auxiliar--;
-    }
-});
+if (document.getElementById( "carousel-previous" )) {
+    carousel_btn_previous = document.getElementById("carousel-previous");
+    carousel_btn_previous.addEventListener('click', () => {
+        if ((auxiliar-1) >= 0) {
+            getImages[auxiliar-1].style.right = 0;
+            getImages[auxiliar].setAttribute("style","");
+            getImages[auxiliar].style.right = wCarousel;
+            auxiliar--;
+        }
+    });
+}
 
-carousel_btn_next.addEventListener('click', () => {
-    if ((auxiliar+1) < getImages.length) {
-        getImages[auxiliar].style.left = (-1)*wCarousel;
-        getImages[auxiliar+1].style.left = 0;
-        auxiliar++;
-    }
-});
+if (document.getElementById( "carousel-next" )) {
+    carousel_btn_next = document.getElementById("carousel-next");
+    carousel_btn_next.addEventListener('click', () => {
+        if ((auxiliar+1) < getImages.length) {
+            getImages[auxiliar].style.left = (-1)*wCarousel;
+            getImages[auxiliar+1].style.left = 0;
+            auxiliar++;
+        }
+    });
+}
