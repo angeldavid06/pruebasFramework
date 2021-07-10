@@ -10,8 +10,8 @@
 </head>
 <body>
     <div class="container">
-        <nav class="row-con bg-aux con-w12 nav">
-            <div class="row-con con-fluid">
+        <nav class="row-con bg-aux con-fluid con-w12 nav justify-center">
+            <div class="con-w9 con-fluid">
                 <div class="con-w4">
                     <h4>Logotipo</h4>
                 </div>
@@ -22,7 +22,14 @@
                 </div>
             </div>
         </nav>
-        <div class="con-w12 banner" style="background-image: url(https://www.tooltyp.com/wp-content/uploads/2014/10/1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.jpg);">
+        <div class="con-w12 banner">
+            <div class="con-w12 carousel">
+                <div id="container-images" class="con-fluid con-nowrap">
+            
+                </div>
+                <button id="carousel-previous" class="btn carousel-btn material-icons">arrow_back_ios</button>
+                <button id="carousel-next" class="btn carousel-btn material-icons">arrow_forward_ios</button>
+            </div>
         </div>
         <div class="row-con con-fluid justify-between">
             <div class="con-w12 con con-fluid con-round align-top txt-justify">
@@ -44,6 +51,41 @@
                 </div>
             </div>
         </div>
+        <footer class="con-w12 bg-aux con-fluid justify-center">
+            <div class="con-w4">
+                <h4>Información</h4>
+                <div class="con-w12">
+                    <ul>
+                        <li>item</li>
+                        <li>item</li>
+                        <li>item</li>
+                        <li>item</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="con-w4">
+                <h4>Contacto</h4>
+                <div class="con-w12">
+                    <ul>
+                        <li>item</li>
+                        <li>item</li>
+                        <li>item</li>
+                        <li>item</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="con-w4">
+                <h4>Ubicación</h4>
+                <div class="con-w12 bg-main align-center justify-center txt-center">
+                    <p>Ubicación</p>
+                </div>
+            </div>
+            <div class="copyright con-w12 txt-center bg-main">
+                <p>Copyright (c) Nombre</p>
+            </div>
+        </footer>
     </div>
+    <script src="../js/library-1.1.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

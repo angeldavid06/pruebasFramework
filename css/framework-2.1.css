@@ -2,6 +2,7 @@ body {
     width: 100%;
     min-height: 100%;
     background-color: var(--background-main);
+    scroll-behavior: smooth;
 }
 
 /* 
@@ -55,9 +56,9 @@ body {
         --background-aux: #F7F7F7;
         --background-aux-03: rgba(247, 247, 247, 0.3);
 
-        --color-text: rgba(0,0,0,0.85);
+        --color-text: rgba(0, 0, 0, 0.85);
         
-        --border: 1px solid rgba(0,0,0,0.3);
+        --border: 1px solid rgba(0, 0, 0, 0.3);
     }
 }
 
@@ -114,7 +115,7 @@ body {
 }
 
 .row-con {
-    margin: auto;
+    margin: 20px auto;
     width: 70%;
     max-width: 70%;
     padding: 15px 0px;
@@ -263,6 +264,7 @@ body {
 }
 
 .nav {
+    margin: 0;
     padding: 0px 20px;
     position: relative;
 }
@@ -287,7 +289,6 @@ body {
 .carousel {
     position: relative;
     overflow: hidden;
-    border-radius: var(--radius);
 }
 
 .carousel .carousel-btn {
@@ -588,16 +589,10 @@ img, svg {
         max-width: 90%;
     }
 
-    .con-w12, .con-w11, .con-w10, .con-w9, .con-w8, .con-w7 {
+    .con-w12, .con-w11, .con-w10, .con-w9, .con-w8, .con-w7, .con-w6, .con-w5, .con-w4, .con-w3, .con-w2 {
         width: 100%;
         max-width: 100%;
         min-width: 100%;
-    }
-    
-    .con-w6, .con-w5, .con-w4, .con-w3, .con-w2 {
-        width: 45%;
-        max-width: 45%;
-        min-width: 45%;
     }
 
     .nav .nav-item {
