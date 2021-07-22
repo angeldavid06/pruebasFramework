@@ -1,0 +1,13 @@
+.grid {
+    display: grid;
+    grid-template: repeat(5,1fr) / repeat(3,1fr);
+}
+
+.g {
+    margin: 10px;
+    padding: 10px;
+}
+
+.g-area {
+    grid-column: 1 / span 3;
+}
