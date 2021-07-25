@@ -1,0 +1,68 @@
+.content-chart {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
+    display: grid;
+    grid-template: 1fr 200px / 40px 1fr;
+}
+
+.result-chart {
+    min-height: 50vh;
+    border-left: var(--border);
+    border-bottom: var(--border);
+    padding: 10px 10px 0px 10px;
+    display: grid;
+    grid-gap: 10px;
+}
+
+.answers {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.answers-grade {
+    display: grid;
+    grid-gap: 10px;
+    text-align: right;
+}
+
+.answers-grade p {
+    padding: 0px 10px 0px 10px ;
+}
+
+.options {
+    display: grid;
+    grid-gap: 10px;
+    padding: 0px 10px;
+    /* background-color: var(--color-red); */
+}
+
+.options .option {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: flex-end;
+    padding: 10px;
+    transform: rotate(180deg);
+    line-clamp: 3;
+}
+
+.options .option p {
+    max-width: 100%;
+    writing-mode: vertical-lr;
+    text-orientation: sideways-right;
+}
+
+.b-chart {
+    padding: 0px 10px;
+    border-radius: var(--radius) var(--radius) 0px 0px;
+    background-color: var(--color-blue);
+    border-top: var(--border);
+    border-left: var(--border);
+    border-right: var(--border);
+    cursor: pointer;
+}
+
+.b-chart:hover {
+    background-color: var(--background-aux);
+}

@@ -8,9 +8,10 @@ body {
 /* 
     Declaración de variables.
 */
+
 :root {
-    --shadow: ;
-    --radius: 5px;
+    --shadow: 0px 10px 10px var(--background-aux);
+    --radius: 10px;
 
     --color-red: #DE4132;
     --color-yellow: #EDB303;
@@ -80,7 +81,7 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background: var(--background-aux); 
+  background: var(--background-aux-03); 
 }
 
 *::-webkit-scrollbar-track:hover,
@@ -89,7 +90,7 @@ body {
 }
 
 *::-webkit-scrollbar-thumb {
-  background: var(--background-main);  
+  background: var(--background-aux);  
 }
 
 /* 
@@ -102,6 +103,10 @@ body {
 
 .bg-aux {
     background-color: var(--background-aux);
+}
+
+.shadow {
+    box-shadow: var(--shadow);
 }
 
 /* 
@@ -172,23 +177,23 @@ body {
     padding: 15px;
 }
 
-.con-outline {
+.border {
     border: var(--border);
 }
 
-.con-fluid {
+.fluid {
     display: flex;
     flex-wrap: wrap;
 }
 
-.con-nowrap {
-    flex-wrap: nowrap;
-}
-
-.con-round {
+.round {
     border-radius: var(--radius);
     overflow: hidden;
     line-height: 0;
+}
+
+.nowrap {
+    flex-wrap: nowrap;
 }
 
 .con-w12 {
