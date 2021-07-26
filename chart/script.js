@@ -1,63 +1,107 @@
 const get_random = () => {
-    return r = Math.floor(Math.random() * 15);
+    return Math.floor(Math.random() * 20);
 }
 
-const render_bar = () => {
-    const max_rows = 15;
-    const max_columns = 23;
-
-    const result_chart = document.getElementsByClassName('result-chart');
-    const question_options = document.getElementsByClassName('question-options');
-    const answers = document.getElementsByClassName('answers');
-    const answers_grade = document.getElementsByClassName('answers-grade');
-    const options = document.getElementsByClassName('options');
+const render_bars = (result_chart,question_options,options) => {
+    const max_rows = 20;
+    const max_columns = 5;
     
-    result_chart[0].setAttribute('style','grid-template: repeat('+ (max_rows-1) +',1fr)' + '/' + 'repeat('+ max_columns +',1fr)');
-    options[0].setAttribute('style','grid-template: 1fr' + '/' + 'repeat('+ max_columns +',1fr)');
-    answers[0].setAttribute('style','grid-template: 1fr / 1fr');
-    
+    result_chart.setAttribute('style','grid-template: repeat('+ max_rows +',1fr)' + '/' + 'repeat('+ max_columns +',1fr)');
+    options.setAttribute('style','grid-template: 1fr' + '/' + 'repeat('+ max_columns +',1fr)');
     
     for (let i = 1; i <= max_columns; i++) {
         const r = get_random();
-        if (r > 0) {
-            const div = document.createElement('div');
-            const answer = document.createElement('div');
-            const option = document.createElement('div');
-            const p = document.createElement('p');
-            
+        const div = document.createElement('div');
+        const pC = document.createElement('p');
+        const option = document.createElement('div');
+        const p = document.createElement('p');
+        
+        if (r > 0) {            
             div.classList.add('b-chart');
-            div.style.gridArea = r  + '/' + i + '/' + max_rows + '/' + i;
+            div.style.gridArea = r+1 + '/' + i + '/' + (max_rows+1) + '/' + i;
             
-            answers_grade[0].setAttribute('style','grid-template: repeat(' + max_rows + ',1fr) / 1fr');
-            
-            question_options[0].style.gridArea = 2  + '/' + 2 + '/' + 3 + '/' + 3;
-            
-            option.classList.add('option');
-            p.innerHTML = 'Opción de la pregunta';
+            pC.innerHTML = (max_rows+1) - (r+1);
 
-            option.appendChild(p);
-            options[0].appendChild(option);
-            result_chart[0].appendChild(div);
+            question_options.style.gridArea = 2  + '/' + 1 + '/' + 3 + '/' + 2;
         } else if (r == 0) {
-            i--;
+            div.classList.add('b-chart');
+            div.style.gridArea = 1  + '/' + i + '/' + (max_rows+1) + '/' + i;
+            
+            pC.innerHTML = (max_rows+1) - 1;
+
+            question_options.style.gridArea = 2  + '/' + 1 + '/' + 3 + '/' + 2;
         }
 
-    }
-    
-    let aux = 1;
+        option.classList.add('option');
+        p.innerHTML = 'Opción de la pregunta';
 
-    for (let j = max_rows; j > 0; j--) {
-        const pA = document.createElement('p');
-        pA.innerHTML = j;
-        pA.style.gridArea = (aux+1)  + '/' + 1 + '/' + aux + '/' + 2;
-        console.log(aux+1);
-        answers_grade[0].appendChild(pA);
-        answers[0].appendChild(answers_grade[0]);
-        aux++;
+        option.appendChild(p);
+        options.appendChild(option);
+        div.appendChild(pC);
+        result_chart.appendChild(div);
     }
+}
+
+const render_title_chart = (question, count) => {
+    const title_chart = document.createElement('div');
+    const h4 = document.createElement('h4');
+    const p = document.createElement('p');
+
+    title_chart.classList.add('title-chart');
+
+    h4.innerHTML = question;
+    p.innerHTML = 'Total de respuestas registradas: ' + count;
     
+    title_chart.appendChild(h4);
+    title_chart.appendChild(p);
+    
+    return title_chart;
+}
+
+const render_content_chart = () => {
+    const content_chart = document.createElement('div');
+    const result_chart = document.createElement('div');
+    const question_options = document.createElement('div');
+    const options = document.createElement('div');
+    
+    content_chart.classList.add('content-chart');
+    result_chart.classList.add('result-chart');
+    question_options.classList.add('question-options');
+    options.classList.add('options');
+
+    render_bars(result_chart,question_options,options);
+
+    question_options.appendChild(options);
+    content_chart.appendChild(result_chart);
+    content_chart.appendChild(question_options);
+
+    return content_chart;
+}
+
+const render_chart = (question, count) => {
+    const fragment = document.createDocumentFragment();
+    const title = render_title_chart(question, count);
+    const content = render_content_chart();
+    
+    fragment.appendChild(title);
+    fragment.appendChild(content);
+
+    return fragment;
+}
+
+const render_main_chart = (main) => {
+    const chart = document.createElement('div');
+    const fragment = render_chart('¿Esta es una pregunta realizada al personal?', '0/50');
+    
+    chart.classList.add('chart');
+
+    chart.appendChild(fragment);
+    main.appendChild(chart);
 }
 
 (() => {
-    render_bar();
+    const row = document.getElementsByClassName('row-con');
+    for (let i = 0; i < 50; i++) {
+        render_main_chart(row[0]);
+    }
 })()

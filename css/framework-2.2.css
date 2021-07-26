@@ -86,11 +86,12 @@ body {
 
 *::-webkit-scrollbar-track:hover,
 *::-webkit-scrollbar-track:active {
-  background: var(--background-aux);
+  background: var(--background-aux-03);
 }
 
 *::-webkit-scrollbar-thumb {
   background: var(--background-aux);  
+  border-radius: var(--radius);
 }
 
 /* 
