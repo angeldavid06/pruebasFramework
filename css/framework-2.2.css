@@ -468,7 +468,7 @@ h6 {
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: rgba(242, 242, 242, 0.3);
+    background-color: transparent;
     margin: 15px 15px 15px 0px;
 }
 
@@ -484,9 +484,35 @@ h6 {
     padding: 10px;
 }
 
+.btn-sm {
+    padding: 5px 8px;
+}
+
+.btn-round {
+    border-radius: 150px;
+}
+
 .btn-blue {
     color: white;
     background-color: var(--color-blue);    
+}
+
+.btn-blue:hover {
+    background-color: var(--color-blue-hover);
+}
+
+.btn-blue-hover {
+    
+    border: 2px solid var(--color-blue);
+}
+
+.btn-blue-hover,
+.btn-blue-hover i {
+    color: var(--color-blue);
+}
+
+.btn-blue-hover:hover i {
+    color: white;
 }
 
 .btn-blue-hover:hover {
@@ -494,7 +520,8 @@ h6 {
     background-color: var(--color-blue);
 }
 
-.btn-blue:focus {
+.btn-blue:focus,
+.btn-blue-hover:focus {
     outline: none;
     box-shadow: 0px 0px 0px 5px var(--color-blue-03);
 }
@@ -504,12 +531,30 @@ h6 {
     background-color: var(--color-red);    
 }
 
+.btn-red:hover {
+    background-color: var(--color-red-hover);
+}
+
+.btn-red-hover {
+    border: 2px solid var(--color-red);
+}
+
+.btn-red-hover,
+.btn-red-hover i {
+    color: var(--color-red);
+}
+
+.btn-red-hover:hover i {
+    color: white;
+}
+
 .btn-red-hover:hover {
     color: white;
     background-color: var(--color-red);
 }
 
-.btn-red:focus {
+.btn-red:focus,
+.btn-red-hover:focus {
     outline: none;
     box-shadow: 0px 0px 0px 5px var(--color-red-03);
 }
@@ -519,12 +564,31 @@ h6 {
     background-color: var(--color-yellow);    
 }
 
+.btn-yellow:hover {
+    background-color: var(--color-yellow-hover);
+}
+
+.btn-yellow-hover {
+    
+    border: 2px solid var(--color-yellow);
+}
+
+.btn-yellow-hover,
+.btn-yellow-hover i {
+    color: var(--color-yellow);
+}
+
+.btn-yellow-hover:hover i {
+    color: white;
+}
+
 .btn-yellow-hover:hover {
     color: white;
     background-color: var(--color-yellow);
 }
 
-.btn-yellow:focus {
+.btn-yellow:focus,
+.btn-yellow-hover:focus {
     outline: none;
     box-shadow: 0px 0px 0px 5px var(--color-yellow-03);
 }
@@ -534,12 +598,31 @@ h6 {
     background-color: var(--color-green);    
 }
 
+.btn-green:hover {
+    background-color: var(--color-green-hover);
+}
+
+.btn-green-hover {
+    
+    border: 2px solid var(--color-green);
+}
+
+.btn-green-hover,
+.btn-green-hover i {
+    color: var(--color-green);
+}
+
+.btn-green-hover:hover i {
+    color: white;
+}
+
 .btn-green-hover:hover {
     color: white;
     background-color: var(--color-green);
 }
 
-.btn-green:focus {
+.btn-green:focus,
+.btn-green-hover:focus {
     outline: none;
     box-shadow: 0px 0px 0px 5px var(--color-green-03);
 }
@@ -673,7 +756,9 @@ img, svg {
         width: 100%;
     }
 
-    .notification .con-w4 {
+    .notification .con-w4,
+    .notification .con-w5,
+    .notification .con-w6 {
         width: 90%;
         max-width: 90%;
         min-width: 90%;
