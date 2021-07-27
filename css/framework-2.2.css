@@ -643,7 +643,7 @@ img, svg {
 }
 
 /* 
-    Responsive design 768px
+    Responsive design 1366px
 */
 
 @media screen and (max-width: 1366px) {
@@ -652,6 +652,10 @@ img, svg {
         max-width: 90%;
     }
 }
+
+/* 
+    Responsive design 768px
+*/
 
 @media screen and (max-width: 768px) {
     .row-con {
