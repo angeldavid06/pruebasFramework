@@ -121,7 +121,7 @@ body {
 }
 
 .row-con {
-    margin: 20px auto;
+    margin: auto;
     width: 70%;
     max-width: 70%;
     padding: 15px 0px;
@@ -267,6 +267,60 @@ body {
     width: 0%;
     max-width: 0%;
     min-width: 0%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-gap: 10px;
+}
+
+.g-w12 {
+    grid-column: 1 / span 12;   
+}
+
+.g-w11 {
+    grid-column: 1 / span 11;   
+}
+
+.g-w10 {
+    grid-column: 1 / span 10;   
+}
+
+.g-w9 {
+    grid-column: 1 / span 9;   
+}
+
+.g-w8 {
+    grid-column: 1 / span 8;   
+}
+
+.g-w7 {
+    grid-column: 1 / span 7;   
+}
+
+.g-w6 {
+    grid-column: 1 / span 6;   
+}
+
+.g-w5 {
+    grid-column: 1 / span 5;   
+}
+
+.g-w4 {
+    grid-column: 1 / span 4;   
+}
+
+.g-w3 {
+    grid-column: 1 / span 3;   
+}
+
+.g-w2 {
+    grid-column: 1 / span 2;   
+}
+
+.g-w1 {
+    grid-column: 1 / span 1;   
 }
 
 .nav {
