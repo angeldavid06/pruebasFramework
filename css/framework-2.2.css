@@ -35,8 +35,8 @@ body {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background-main: #26272E;
-        --background-aux: #323640;
+        --background-main: #232323;
+        --background-aux: #383838;
         --background-aux-03: rgba(32, 32, 32, 0.3);
 
         --focus: rgba(242, 242, 242, 0.3);
