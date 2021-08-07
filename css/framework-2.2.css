@@ -325,6 +325,14 @@ body {
     grid-column: 1 / span 1;   
 }
 
+table {
+    width: 100%;
+}
+
+th, td {
+    padding: 10px;
+}
+
 .nav {
     margin: 0;
     padding: 0px 20px;
