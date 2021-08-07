@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSPDF</title>
-    <link rel="stylesheet" href="../css/framework-2.2.css">
+    <link rel="stylesheet" href="../css/framework-2.2.css"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <div class="row-con con-w7 con con-fluid justify-center">
+        <div class="row-con con-w8 con con-fluid justify-center">
             <div class="grid g-w12">
                 <div class="g-w12">
                     <h2 class="title g-w12 txt-center">Hola Mundo</h2>
-                    <p class="con-w6 p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In blanditiis ipsum eum beatae ut eveniet, voluptate deleniti nesciunt ad eaque ratione vitae delectus modi temporibus dolor sequi aliquam voluptas officia!</p>
-                    <p class="con-w6 p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In blanditiis ipsum eum beatae ut eveniet, voluptate deleniti nesciunt ad eaque ratione vitae delectus modi temporibus dolor sequi aliquam voluptas officia!</p>
-                    <p class="con-w6 p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In blanditiis ipsum eum beatae ut eveniet, voluptate deleniti nesciunt ad eaque ratione vitae delectus modi temporibus dolor sequi aliquam voluptas officia!</p>
+                    <p class="con-w12 p" id="container">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In blanditiis ipsum eum beatae ut eveniet, voluptate deleniti nesciunt ad eaque ratione vitae delectus modi temporibus dolor sequi aliquam voluptas officia!</p>
+                    <p class="con-w12 p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In blanditiis ipsum eum beatae ut eveniet, voluptate deleniti nesciunt ad eaque ratione vitae delectus modi temporibus dolor sequi aliquam voluptas officia!</p>
+                    <p class="con-w12 p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In blanditiis ipsum eum beatae ut eveniet, voluptate deleniti nesciunt ad eaque ratione vitae delectus modi temporibus dolor sequi aliquam voluptas officia!</p>
+                    <h4 class="title g-w12">Título de la tabla</h4>
                     <table class="border round table">
                         <thead>
                             <tr>
@@ -38,12 +39,62 @@
                             </tr>
                         </tbody>
                     </table>
-                    <button class="btn btn-blue getPDF">Generar PDF</button>
+                    <h4 class="title g-w12">Título de la tabla</h4>
+                    <table class="border round table">
+                        <thead>
+                            <tr>
+                                <th>item-1</th>
+                                <th>item-2</th>
+                                <th>item-3</th>
+                                <th>item-4</th>
+                                <th>item-5</th>
+                                <th>item-6</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>item_1</td>
+                                <td>item_2</td>
+                                <td>item_3</td>
+                                <td>item_4</td>
+                                <td>item_5</td>
+                                <td>item_6</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4 class="title g-w12">Título de la tabla</h4>
+                    <table class="border round table">
+                        <thead>
+                            <tr>
+                                <th>item-1</th>
+                                <th>item-2</th>
+                                <th>item-3</th>
+                                <th>item-4</th>
+                                <th>item-5</th>
+                                <th>item-6</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>item_1</td>
+                                <td>item_2</td>
+                                <td>item_3</td>
+                                <td>item_4</td>
+                                <td>item_5</td>
+                                <td>item_6</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button class="btn btn-blue btn-icon getPDF">
+                        <i class="material-icons">print</i>
+                        Imprimir
+                    </button>
                 </div>
             </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.2.1/html2canvas.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
