@@ -199,6 +199,28 @@ body {
     flex-wrap: nowrap;
 }
 
+table {
+    width: 100%;
+    transition: all .2s;
+    border-collapse: collapse;
+}
+
+thead {
+    border-bottom: var(--border);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--background-aux);
+}
+
+tbody tr:hover {
+    background-color: var(--color-blue-03);
+}
+
+th, td {
+    padding: 15px;
+}
+
 .con-w12 {
     width: 100%;
     min-width: 100%;
@@ -323,19 +345,6 @@ body {
 
 .g-w1 {
     grid-column: 1 / span 1;   
-}
-
-table {
-    width: 100%;
-    transition: all .2s;
-}
-
-table:hover {
-    box-shadow: var(--shadow);
-}
-
-th, td {
-    padding: 15px;
 }
 
 .nav {
