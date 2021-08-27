@@ -9,7 +9,7 @@
 </head>
 <body>
     <h3 class="con-w12 txt-center">Impresión de prueba</h3>
-    
-    <script src="pdf.js"></script>
+    <?php echo 'Esto es una prueba de impresión';?>
+    <!-- <script src="pdf.js"></script> -->
 </body>
 </html>
