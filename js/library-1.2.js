@@ -469,6 +469,6 @@ function printPage (sURL) {
     oHideFrame.style.width = "0";
     oHideFrame.style.height = "0";
     oHideFrame.style.border = "0";
-    oHideFrame.src = sURL;
+    oHideFrame.src = sURL
     document.body.appendChild(oHideFrame);
 }

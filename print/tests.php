@@ -9,7 +9,11 @@
 </head>
 <body>
     <h3 class="con-w12 txt-center">Impresión de prueba</h3>
-    <?php echo 'Esto es una prueba de impresión';?>
+    <h1>Hola</h1>
+    <?php 
+        $tabla = $_GET['tabla'];
+        echo '<pre>'.htmlentities($tabla).'</pre>';
+    ?>
     <!-- <script src="pdf.js"></script> -->
 </body>
 </html>
